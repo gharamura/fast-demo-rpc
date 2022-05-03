@@ -92,6 +92,7 @@ const executePayment = async (ctx, next) => {
   ctx.status = 200;
   ctx.body = {
     paymnetId: payment.id,
+    status: result.status,
     message: result.message,
     code: result.code,
     retry: result.retry,
