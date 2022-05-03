@@ -23,7 +23,7 @@ function executeTransaction(type, currentStatus) {
     EXCEEDED: {
       status: "REFUSED",
       code: "70",
-      message: "Unauthorized transaction. Limit exceeded/no balance",
+      message: "Unauthorized transaction. Limit exceeded",
       retry: false,
     },
   };
@@ -91,7 +91,7 @@ const executePayment = async (ctx, next) => {
 
   ctx.status = 200;
   ctx.body = {
-    paymnetId: payment.id,
+    paymentId: payment.id,
     status: result.status,
     message: result.message,
     code: result.code,
