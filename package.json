@@ -1,0 +1,32 @@
+{
+  "name": "fast-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "rafgoncalves",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "@vscode/sqlite3": "^5.0.8",
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "dotenv": "^16.0.0",
+    "knex": "^1.0.5",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "prettyjson": "^1.2.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "eslint": "^8.14.0"
+  }
+}
