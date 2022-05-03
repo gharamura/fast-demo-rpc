@@ -38,16 +38,16 @@ function executeTransaction(type, currentStatus) {
   if (currentStatus === "PRE") {
     if (rng <= 70) {
       return responses["SUCCESS"];
-    } else if (rng < 75) {
+    } else if (rng < 73) {
       return responses["FRAUD"];
-    } else if (rng < 80) {
+    } else if (rng < 76) {
       return responses["EXCEEDED"];
     }
     return responses["FAIL"];
   } else {
-    if (rng <= 90) {
+    if (rng <= 93) {
       return responses["SUCCESS"];
-    } else if (rng < 95) {
+    } else if (rng < 97) {
       return responses["FRAUD"];
     }
     return responses["EXCEEDED"];
@@ -80,8 +80,12 @@ const executePayment = async (ctx, next) => {
     updated_at: new Date(),
   });
 
+  console.log(`Payment opCode [${payment.op_code}]`);
+
   const result = executeTransaction(payment.op_code, payment.status_code);
 
+  console.log(`Transaction response code [${result.code}]`);
+  
   await db("payments").where({ id: paymentId }).update({
     status_code: result.status,
     external_status: result.code,
