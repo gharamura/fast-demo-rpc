@@ -14,7 +14,7 @@
     "ajv": "^8.11.0",
     "ajv-formats": "^2.1.1",
     "dotenv": "^16.0.0",
-    "knex": "^1.0.5",
+    "knex": "^2.4.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
